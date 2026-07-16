@@ -1,0 +1,113 @@
+/* =========================
+   FIXED SPEEDOMETER
+   ========================= */
+
+.scroll-speedometer {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+
+  z-index: 1001;
+
+  width: 125px;
+  min-height: 92px;
+  padding: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+
+  background: rgba(7, 10, 9, 0.92);
+  backdrop-filter: blur(12px);
+
+  color: #f5f4ec;
+  font-family: monospace;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.35),
+    inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+  pointer-events: none;
+}
+
+.scroll-speedometer__route {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #8c8c83;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.scroll-speedometer__value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scroll-speedometer__value small {
+  margin-left: 4px;
+
+  color: #b7b7af;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.scroll-speedometer__status {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #b7d934;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* =========================
+   MOVING CAR
+   ========================= */
+
+.scroll-car {
+  position: fixed;
+  top: 20px;
+  right: 0px;
+
+  width: 120px;
+
+  z-index: 1000;
+
+  pointer-events: none;
+  will-change: transform;
+
+  transition: transform 0.2s ease-out;
+}
+
+.scroll-car__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transform: rotate(90deg);
+
+  object-fit: contain;
+  user-select: none;
+
+  filter:
+    drop-shadow(0 0 10px rgba(0, 229, 255, 0.55))
+    drop-shadow(0 0 22px rgba(0, 229, 255, 0.3));
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+  .scroll-car,
+  .scroll-speedometer {
+    display: none;
+  }
+}
+

@@ -1,0 +1,128 @@
+.journey {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  /* background-size: 40px 40px; */
+  background-color: transparent;
+  color: #fff;
+  padding: 4rem 3rem;
+  position: relative;
+}
+
+.journey__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 4rem;
+}
+
+.journey__timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.journey__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #c6f135;
+  transform: translateX(-50%);
+}
+
+.journey__item {
+  position: relative;
+  width: 45%;
+  margin-bottom: 6rem;
+}
+
+.journey__item--left {
+  left: 0;
+}
+
+.journey__item--right {
+  left: 55%;
+}
+
+.journey__dot {
+  position: absolute;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 3px solid #c6f135;
+}
+
+.journey__item--left .journey__dot {
+  right: -34px;
+}
+
+.journey__item--right .journey__dot {
+  left: -34px;
+}
+
+
+
+.journey__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.75rem;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey__card:hover {
+  border-color: rgba(198, 241, 53, 0.6);
+  box-shadow: 0 0 20px rgba(198, 241, 53, 0.25);
+  transform: translateY(-5px) ;
+}
+
+.journey__card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+
+
+.journey__meta {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.journey__card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.journey__card li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .journey__item,
+  .journey__item--left,
+  .journey__item--right {
+    width: 100%;
+    left: 0;
+    padding-left: 2.5rem;
+  }
+
+  .journey__line {
+    left: 16px;
+  }
+
+  .journey__item--left .journey__dot,
+  .journey__item--right .journey__dot {
+    left: 8px;
+    right: auto;
+  }
+}

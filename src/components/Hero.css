@@ -1,0 +1,137 @@
+.hero {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__nav {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 0.6rem 0.6rem 0.6rem 1.5rem;
+  width: fit-content;
+}
+
+.hero__nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hero__nav ul a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.6rem 2.4rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero__nav ul a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.hero__nav ul li:last-child a {
+  background: #fff;
+  color: #0a0a0a !important;
+  font-weight: 600;
+}
+
+.hero__nav ul li:last-child a:hover {
+  background: #eee;
+}
+
+.hero__cta {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 4vh;
+  flex: 1;
+}
+
+.hero__content h1 {
+  font-size: clamp(4rem, 13vw, 11rem);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  margin-top: 4rem;
+}
+
+.hero__face {
+  position: absolute;
+  top: 20vh;
+  width: min(45vw, 620px);
+  height: auto;
+  z-index: 2;
+  transition: transform 0.15s ease-out;
+  pointer-events: none;
+}
+
+.hero__side-cta {
+  position: absolute;
+  top: 35vh;
+  right: 8%;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  z-index: 3;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.hero__side-cta:hover {
+  animation-play-state: paused;
+  transform: scale(1.08);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(241, 7, 163, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px 8px rgba(241, 7, 163, 0.3);
+    transform: scale(1.04);
+  }
+}
+
+.hero__tagline {
+  position: absolute;
+  left: 3rem;
+  bottom: 6%;
+  max-width: 320px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
