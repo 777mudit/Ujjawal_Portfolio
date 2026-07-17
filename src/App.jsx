@@ -5,7 +5,7 @@ import Projects from './components/Projects.jsx'
 import TechStack from './components/TechStack.jsx'
 import ScrollCar from './components/ScrollCar.jsx'
 import ProblemSolving from './components/ProblemSolving.jsx'
-import Contact from './components/contact.jsx'
+import Contact from './components/Contact.jsx'
 import './App.css'
 
 function App() {
