@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import './Hero.css'
-import faceImg from '../assets/face.png'
+import faceImg from '../assets/Face.png'
 
 const navLinks = [
   { href: '#projects', label: 'Projects' },
